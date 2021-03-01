@@ -37,6 +37,10 @@ let foods = [
 
 //CODE HERE
 
+foods.forEach(function () {
+
+});
+
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -80,7 +84,11 @@ const products = [
   Save the copy to a new variable called 'saleProducts'.
 */
 
+
+
 //CODE HERE
+
+products.map(price => price / 0.25)
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -131,6 +139,8 @@ const shippingInfo = {
 
 //CODE HERE
 
+const helensInfo = Object.assign({}, contactInfo, shippingInfo)
+
 ////////////////////PROBLEM 6////////////////////
 /*
   Helen has a daughter named Ellen that lives at the same address.
@@ -140,12 +150,16 @@ const shippingInfo = {
 
 //CODE HERE
 
+const ellensInfo = { ...helensInfo };
+
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
 //CODE HERE
+
+const { email } = contactInfo;
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -154,6 +168,8 @@ const shippingInfo = {
 */
 
 //CODE HERE
+
+const { zipCode, state } = shippingInfo
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
@@ -217,6 +233,8 @@ const userInfo = {
 
 //CODE HERE
 
+
+
 ////////////////////PROBLEM 10////////////////////
 /*
   Set the value of topic below to the last item in gn@rly_c0der_007's topics array
@@ -240,8 +258,8 @@ const userInfo = {
       - name, string
       - age, number
       - jobs, array with at least 3 items that are strings
-      - birthday, function that adds 1 to the age, use the 'this' keyword to access age
-      - favorites, an object that has the following properties
+      - birthday, function that adds 1 to the age, use the 'this' keyword to age
+      - favorites, an object that has the following propertiesaccess 
       - color, string
       - number, number
       - book, string
@@ -251,6 +269,21 @@ const userInfo = {
 */
 
 //CODE HERE
+
+const person = {
+  name: 'Mewtwo',
+  age: 30,
+  jobs: ['nothing', 'eating', 'sleeping'],
+  birthday: function plusOne() {
+    this.age
+  },
+  // favorites = {
+  //   color: 'red',
+  //   number: 4,
+  //   book: 'pokemon',
+  //   kids: [],
+  // },
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -276,7 +309,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -289,6 +322,6 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-// let context2 = window
+let context2 = window
 //let context2 = global
 //let context2 = workout
